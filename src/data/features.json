@@ -1,0 +1,16 @@
+[
+  {
+    "id": "timer",
+    "title": "Timer",
+    "description": "Count down with simple, precise control and an elegant interface.",
+    "path": "/timer",
+    "icon": "⏱"
+  },
+  {
+    "id": "debounce",
+    "title": "Debounce",
+    "description": "Explore controlled input behavior and delayed actions in a cleaner dashboard.",
+    "path": "/debounce",
+    "icon": "⌕"
+  }
+]
