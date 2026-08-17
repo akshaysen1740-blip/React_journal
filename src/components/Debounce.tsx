@@ -3,7 +3,7 @@ import FeatureLayout from "./FeatureLayout";
 
 const Debounce = () => {
   const [comments, setComments] = useState<any[]>([]);
-  const [filteredData, setFilteredData] = useState<any[]>([]);
+  const [filteredData, setFilteredData] = useState<any[ ]>([]);
   const [search, setSearch] = useState<string>("");
 
   useEffect(() => {

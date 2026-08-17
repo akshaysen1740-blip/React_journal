@@ -12,5 +12,12 @@
     "description": "Explore controlled input behavior and delayed actions in a cleaner dashboard.",
     "path": "/debounce",
     "icon": "⌕"
+  },
+  {
+    "id": "trottle",
+    "title": "Throttle Scroll",
+    "description": "search box or scroll-tracking component where the handler fires at most once every N ms",
+    "path": "/throttle-scroll",
+    "icon": "⏱"
   }
 ]
