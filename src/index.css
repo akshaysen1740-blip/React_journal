@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --palette-1: #73030D;
   --palette-2: #732F3B;
@@ -24,6 +26,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: inherit;
 }
 
 html, body, #root {
