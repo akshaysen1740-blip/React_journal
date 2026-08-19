@@ -45,18 +45,28 @@ const Debounce = () => {
   return (
     <FeatureLayout
       title="Debounce"
-      description="Explore delayed input handling and optimized event flow in a consistent feature layout."
+      description="Explore delayed input handling and optimized event flow with live JSONPlaceholder data."
       badge="Utility"
     >
       <div className="debounce-page">
         <div className="debounce-card">
+          <div className="debounce-header-bar">
+            <span className="debounce-header-title">Live Comment Filter</span>
+            <span className="debounce-counter-badge">
+              {filteredData ? `${filteredData.length} comments` : "Loading..."}
+            </span>
+          </div>
+
           <div className="debounce-search-wrap">
             <input
               type="text"
-              placeholder="Search comments"
+              placeholder="Type at least 3 characters to search by email or name..."
               value={search}
               onChange={(e) => setSearch(e.target.value.toLowerCase())}
             />
+            <div className="debounce-search-hint">
+              <span>⏱</span> 1000ms debounce delay applies after 3+ characters typed.
+            </div>
           </div>
 
           <div className="debounce-list" role="list">
@@ -68,7 +78,9 @@ const Debounce = () => {
                 </div>
               ))
             ) : (
-              <div className="debounce-empty">No comments found.</div>
+              <div className="debounce-empty">
+                {comments.length === 0 ? "Fetching comments from API..." : "No matching comments found."}
+              </div>
             )}
           </div>
         </div>

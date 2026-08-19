@@ -19,5 +19,12 @@
     "description": "search box or scroll-tracking component where the handler fires at most once every N ms",
     "path": "/throttle-scroll",
     "icon": "⏱"
+  },
+  {
+    "id": "stop-watch",
+    "title": "Stop Watch",
+    "description": "Stop watch and it's features",
+    "path": "/stopwatch",
+    "icon": "⏱"
   }
 ]

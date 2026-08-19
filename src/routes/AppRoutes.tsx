@@ -4,6 +4,7 @@ import Debounce from "../components/Debounce";
 import { Timer } from "../components/Timer";
 import  HomePage  from "../components/Home";
 import ThrottleScroll from "../components/ThrottleScroll";
+import StopWatch from "../components/StopWatch";
 
 
 const AppRoutes = () => {
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/timer" element={<Timer />} />
         <Route path="/debounce" element={<Debounce />} />
         <Route path="/throttle-scroll" element={<ThrottleScroll />} />
+        <Route path="/stopwatch" element={<StopWatch />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

@@ -18,7 +18,7 @@ const FeatureCard = ({ icon, title, description, path }: FeatureCardProps) => {
         <p>{description}</p>
       </div>
       <Link className="feature-link" to={path}>
-        Open {title}
+        Open {title} &rarr;
       </Link>
     </article>
   );
