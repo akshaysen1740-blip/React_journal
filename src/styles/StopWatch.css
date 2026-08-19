@@ -1,0 +1,215 @@
+.stopwatch-page {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+
+.stopwatch-card,
+.stopwatch-flags {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.stopwatch-card {
+  padding: 30px;
+}
+
+.stopwatch-card-header,
+.stopwatch-flags-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.stopwatch-kicker,
+.stopwatch-display-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stopwatch-card h2,
+.stopwatch-flags h2 {
+  margin-top: 6px;
+  font-size: 1.35rem;
+}
+
+.stopwatch-status,
+.stopwatch-flag-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stopwatch-status.is-running {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.stopwatch-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background-color: var(--text-muted);
+}
+
+.stopwatch-status.is-running .stopwatch-status-dot {
+  background-color: var(--text-primary);
+  box-shadow: 0 0 0 3px var(--bg-secondary);
+}
+
+.stopwatch-display-wrap {
+  margin-top: 28px;
+  padding: 34px 20px 25px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+.stopwatch-display {
+  margin-top: 12px;
+  color: var(--text-primary);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.stopwatch-units {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 14px auto 0;
+  max-width: 430px;
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stopwatch-actions {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.8fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.stopwatch-button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.stopwatch-button:hover {
+  border-color: var(--border-hover);
+  background-color: var(--bg-hover);
+  box-shadow: var(--shadow-xs);
+}
+
+.stopwatch-button-primary {
+  border-color: var(--accent-primary);
+  background-color: var(--accent-primary);
+  color: var(--accent-text);
+}
+
+.stopwatch-button-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.stopwatch-button-quiet {
+  color: var(--text-secondary);
+}
+
+.stopwatch-flags {
+  padding: 24px;
+}
+
+.stopwatch-flag-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.stopwatch-flag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.stopwatch-flag span {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stopwatch-flag strong {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .stopwatch-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .stopwatch-card {
+    padding: 22px 18px;
+  }
+
+  .stopwatch-card-header {
+    flex-direction: column;
+  }
+
+  .stopwatch-display-wrap {
+    padding: 28px 10px 22px;
+  }
+
+  .stopwatch-display {
+    font-size: clamp(1.45rem, 9vw, 2.5rem);
+  }
+
+  .stopwatch-units {
+    font-size: 0.52rem;
+  }
+
+  .stopwatch-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stopwatch-button-primary {
+    grid-column: 1 / -1;
+  }
+}
